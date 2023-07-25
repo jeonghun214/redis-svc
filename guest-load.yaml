@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fronted
+  labels:
+    app: guestbook
+    tier: fronted
+spec:
+  selector:
+    app: guestbook
+    tier: fronted
+  ports:
+  - port: 80
+    targetPort: 6379
